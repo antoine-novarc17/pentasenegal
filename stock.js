@@ -1,44 +1,42 @@
-const PASSWORD = "PENTA2026";
+validateStock.onclick = function(){
 
-
-function login(){
-
-const name = document.getElementById("name").value;
-const company = document.getElementById("company").value;
+const nom = document.getElementById("nom").value;
+const prenom = document.getElementById("prenom").value;
+const entreprise = document.getElementById("entreprise").value;
 const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
 
 
-if(password !== PASSWORD){
+if(!nom || !prenom || !entreprise || !email){
 
-document.getElementById("error").textContent =
-"Mot de passe incorrect";
+document.getElementById("stock-message").textContent =
+"Merci de remplir tous les champs.";
 
 return;
 
 }
 
 
-// Envoi des informations au Google Sheet
+// Enregistrement Google Sheet
 
 fetch("https://script.google.com/macros/s/AKfycbzPkNUhj-Z4K1eEp_pBlYiPxKiYub3_wU8ORDwJgxhnERmWAgTgCbQgPLEIOVpMO2iV/exec", {
 
 method:"POST",
 
-body: JSON.stringify({
-name:name,
-company:company,
+body:JSON.stringify({
+
+nom:nom,
+prenom:prenom,
+entreprise:entreprise,
 email:email
+
 })
 
 });
 
 
-// Affichage du stock
+// Redirection vers la page stock
 
-document.getElementById("login-box").style.display="none";
-
-document.getElementById("stock-content").style.display="block";
+window.location.href = "stock.html";
 
 
-}
+};
