@@ -193,9 +193,14 @@ section { padding: 96px 0; }
   background: var(--volt);
   color: var(--couleur-principale);
   padding: 8px 16px;
-  margin: 4px;
+  border: 1px solid transparent;
 }
-.nav-cta:hover { background: transparent; border: 1px solid var(--volt); color: var(--volt); }
+
+.nav-cta:hover {
+  background: transparent;
+  border-color: var(--volt);
+  color: var(--volt);
+}
 
 .nav-toggle {
   display: none;
