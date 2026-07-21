@@ -186,17 +186,28 @@ section { padding: 96px 0; }
 }
 .main-nav a:not(.nav-cta):hover::after { width: 100%; }
 
-.nav-cta {
+.main-nav a.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   font-family: var(--font-mono);
   text-transform: uppercase;
   font-size: 0.8rem;
+  text-decoration: none;
+
   background: var(--volt);
-  color: var(--couleur-principale);
-  padding: 8px 16px;
+  color: var(--ink);
+
+  padding: 10px 20px;      /* espace intérieur */
   border: 1px solid transparent;
+  border-radius: 3px;
+
+  line-height: 1;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 
-.nav-cta:hover {
+.main-nav a.nav-cta:hover {
   background: transparent;
   border-color: var(--volt);
   color: var(--volt);
