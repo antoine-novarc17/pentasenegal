@@ -21,7 +21,7 @@ return;
 
 // Envoi des informations au Google Sheet
 
-fetch("TON_URL_GOOGLE_SCRIPT", {
+fetch("https://script.google.com/macros/s/AKfycbzPkNUhj-Z4K1eEp_pBlYiPxKiYub3_wU8ORDwJgxhnERmWAgTgCbQgPLEIOVpMO2iV/exec", {
 
 method:"POST",
 
