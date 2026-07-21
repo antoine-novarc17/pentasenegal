@@ -82,30 +82,56 @@
 </header>
 
 <main>
-  <!-- ============ STOCK ============ -->
-  <section class="stock" id="stock">
-    <div class="container">
-      <p class="eyebrow">Disponibilité</p>
-      <h2>Stock actuel des produits</h2>
-      <p class="section-lead">
-        Aperçu indicatif de nos stocks. Pour une disponibilité précise
-        ou une commande, contactez directement notre équipe.
-      </p>
 
-      <!-- Le tableau est généré depuis script.js (voir le tableau "produits").
-           Pour modifier le stock, il suffit d'éditer ce tableau dans script.js,
-           sans toucher au HTML. -->
-      <div class="stock-table" id="stock-table" role="table" aria-label="Stock actuel des produits">
-        <div class="stock-row stock-head" role="row">
-          <span role="columnheader">Produit</span>
-          <span role="columnheader">Catégorie</span>
-          <span role="columnheader">Quantité</span>
-          <span role="columnheader">Statut</span>
-        </div>
-        <!-- Les lignes de produits sont injectées ici en JavaScript -->
-      </div>
-    </div>
-  </section>
+
+<section class="stock-page">
+
+
+<div class="container">
+
+
+<p class="eyebrow">
+Disponibilité
+</p>
+
+
+<h1>
+Stock produits
+</h1>
+
+
+<p class="section-lead">
+Accès réservé aux partenaires.
+</p>
+
+
+
+<div id="stock-content" class="hidden">
+
+
+<div class="stock-table" id="stock-table">
+
+<div class="stock-row stock-head">
+
+<span>Produit</span>
+<span>Catégorie</span>
+<span>Quantité</span>
+<span>Statut</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
 
 </main>
 
@@ -119,75 +145,3 @@
   </div>
 </footer>
 
-<input id="visitor-nom" placeholder="Nom">
-
-<input id="visitor-prenom" placeholder="Prénom">
-
-<input id="visitor-entreprise" placeholder="Entreprise">
-
-<input id="visitor-email" placeholder="Email professionnel">
-
-
-<button class="btn btn-primary" id="validate-stock">
-Accéder au stock
-</button>
-
-
-<p id="stock-message"></p>
-
-
-</div>
-
-
-</div>
-
-     
-<script src="script.js"></script>
-
-     <script>
-
-const validateStock = document.getElementById("validate-stock");
-
-const modalStock = document.getElementById("stock-modal");
-
-const stockContent = document.getElementById("stock-content");
-
-
-validateStock.addEventListener("click", function(){
-
-
-const nom = document.getElementById("visitor-nom").value;
-const prenom = document.getElementById("visitor-prenom").value;
-const entreprise = document.getElementById("visitor-entreprise").value;
-const email = document.getElementById("visitor-email").value;
-
-
-
-if(
-nom === "" ||
-prenom === "" ||
-entreprise === "" ||
-email === ""
-){
-
-document.getElementById("stock-message").textContent =
-"Veuillez remplir tous les champs.";
-
-return;
-
-}
-
-
-// ouverture du stock
-
-modalStock.style.display = "none";
-
-stockContent.style.display = "block";
-
-
-});
-
-</script>
-     
-</body>
-</html>
