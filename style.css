@@ -382,15 +382,45 @@ section { padding: 96px 0; }
   transition: transform 0.4s ease;
 }
 .slide {
+  position: relative;
   min-width: 100%;
-  height: 380px;
+  height: 450px;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
-  padding: 28px;
+  padding: 32px;
   color: var(--paper);
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+/* Image plein écran */
+.slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dégradé sombre pour garder le texte lisible */
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(13,36,51,0.8),
+    rgba(13,36,51,0.1)
+  );
+}
+
+/* Texte au-dessus de l'image */
+.slide span {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
 }
 /* Fonds provisoires distincts pour chaque slide — à remplacer par de vraies photos */
 .slide-a { background: linear-gradient(160deg, var(--steel), var(--ink)); }
