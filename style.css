@@ -153,16 +153,14 @@ section { padding: 96px 0; }
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
-  color: var(--paper);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  font-weight: 600;
 }
-.logo span {
-  color: var(--volt);
-  margin-left: 0.35em;
+.logo-svg {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 
 .main-nav {
@@ -511,7 +509,6 @@ section { padding: 96px 0; }
   gap: 16px;
   font-size: 0.85rem;
 }
-.logo-footer { font-size: 1rem; }
 
 /* =========================================================
    Responsive
