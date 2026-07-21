@@ -143,5 +143,51 @@ Accéder au stock
 
      
 <script src="script.js"></script>
+
+     <script>
+
+const validateStock = document.getElementById("validate-stock");
+
+const modalStock = document.getElementById("stock-modal");
+
+const stockContent = document.getElementById("stock-content");
+
+
+validateStock.addEventListener("click", function(){
+
+
+const nom = document.getElementById("visitor-nom").value;
+const prenom = document.getElementById("visitor-prenom").value;
+const entreprise = document.getElementById("visitor-entreprise").value;
+const email = document.getElementById("visitor-email").value;
+
+
+
+if(
+nom === "" ||
+prenom === "" ||
+entreprise === "" ||
+email === ""
+){
+
+document.getElementById("stock-message").textContent =
+"Veuillez remplir tous les champs.";
+
+return;
+
+}
+
+
+// ouverture du stock
+
+modalStock.style.display = "none";
+
+stockContent.style.display = "block";
+
+
+});
+
+</script>
+     
 </body>
 </html>
