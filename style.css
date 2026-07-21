@@ -301,8 +301,21 @@ section { padding: 96px 0; }
 .competences-grid {
   margin-top: 48px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 28px;
+}
+
+.competences-grid .plate {
+  grid-column: span 2;
+}
+
+/* Centre les deux dernières cartes */
+.competences-grid .plate:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.competences-grid .plate:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 /* Carte "plaque" : coins pointés comme des rivets, obtenus en pur CSS
