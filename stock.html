@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Penta Sénégal - Stock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="stock-login">
+
+<h1>Accès stock Penta Sénégal</h1>
+
+<div id="login-box">
+
+<label>Nom</label>
+<input type="text" id="name">
+
+<label>Entreprise</label>
+<input type="text" id="company">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Mot de passe</label>
+<input type="password" id="password">
+
+<button onclick="login()">Accéder au stock</button>
+
+<p id="error"></p>
+
+</div>
+
+
+<div id="stock-content" style="display:none;">
+
+<h2>Stock disponible</h2>
+
+<!-- Ton tableau de stock ici -->
+
+<p>Bienvenue dans l'espace stock.</p>
+
+</div>
+
+</section>
+
+
+<script src="stock.js"></script>
+
+</body>
+</html>
