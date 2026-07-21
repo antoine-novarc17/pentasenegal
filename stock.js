@@ -5,31 +5,44 @@ const modal = document.getElementById("stock-modal");
 const validate = document.getElementById("validate-stock");
 const close = document.getElementById("close-stock");
 const stock = document.getElementById("stock-content");
+const message = document.getElementById("stock-message");
+
+
+// URL Google Apps Script
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzPkNUhj-Z4K1eEp_pBlYiPxKiYub3_wU8ORDwJgxhnERmWAgTgCbQgPLEIOVpMO2iV/exec";
 
 
 // Affiche la popup dès l'arrivée sur la page
 
-modal.style.display = "flex";
+if(modal){
+    modal.style.display = "flex";
+}
 
 
 // Fermeture bouton X
 
-close.addEventListener("click", function(){
+if(close){
 
-    modal.style.display = "none";
+    close.addEventListener("click", function(){
 
-});
+        modal.style.display = "none";
+
+    });
+
+}
 
 
-// Validation
+
+// Validation formulaire
 
 validate.addEventListener("click", function(){
 
 
-const nom = document.getElementById("nom").value;
-const prenom = document.getElementById("prenom").value;
-const entreprise = document.getElementById("entreprise").value;
-const email = document.getElementById("email").value;
+const nom = document.getElementById("nom").value.trim();
+const prenom = document.getElementById("prenom").value.trim();
+const entreprise = document.getElementById("entreprise").value.trim();
+const email = document.getElementById("email").value.trim();
+
 
 
 if(
@@ -39,7 +52,7 @@ entreprise === "" ||
 email === ""
 ){
 
-document.getElementById("stock-message").textContent =
+message.textContent =
 "Merci de remplir tous les champs.";
 
 return;
@@ -47,19 +60,58 @@ return;
 }
 
 
-// Cache popup
+// Message attente
 
-modal.style.display = "none";
-
-
-// Affiche le stock
-
-stock.classList.remove("hidden");
+message.textContent = "Enregistrement en cours...";
 
 
-// Charge les produits
 
-chargerStock();
+// Envoi vers Google Sheet
+
+fetch(GOOGLE_SCRIPT_URL, {
+
+    method: "POST",
+
+    body: JSON.stringify({
+
+        nom: nom,
+        prenom: prenom,
+        entreprise: entreprise,
+        email: email
+
+    })
+
+})
+
+.then(response => {
+
+
+    // Fermeture popup
+
+    modal.style.display = "none";
+
+
+    // Affiche le stock
+
+    stock.classList.remove("hidden");
+
+
+    // Charge les produits
+
+    chargerStock();
+
+
+})
+
+.catch(error => {
+
+
+    console.error(error);
+
+    message.textContent =
+    "Une erreur est survenue. Veuillez réessayer.";
+
+});
 
 
 });
@@ -67,6 +119,8 @@ chargerStock();
 
 
 });
+
+
 
 
 
@@ -94,6 +148,14 @@ statut:"Disponible"
 
 
 const table = document.getElementById("stock-table");
+
+
+// Sécurité : évite de charger deux fois le stock
+
+if(table.querySelector(".stock-row:not(.stock-head)")){
+    return;
+}
+
 
 
 produits.forEach(p => {
