@@ -35,7 +35,10 @@ email:email
 
 
 // Redirection vers la page stock
-
+sessionStorage.setItem(
+"stockAccess",
+"true"
+);
 window.location.href = "stock.html";
 
 
