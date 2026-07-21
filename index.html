@@ -71,7 +71,7 @@
       <a href="#competences">Compétences</a>
       <a href="#stock">Stock</a>
       <a href="#galerie">Galerie</a>
-      <a href="stock.html">Accès stock</a>
+      <a href="#" id="open-stock">Accès stock</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
 
@@ -320,6 +320,41 @@
   </div>
 </footer>
 
+<div class="stock-modal" id="stock-modal">
+
+  <div class="stock-box">
+
+    <button class="close-stock" id="close-stock">
+      ×
+    </button>
+
+    <h2>Accès stock</h2>
+
+    <p>
+      Cet espace est réservé aux partenaires.
+      Merci de renseigner vos informations.
+    </p>
+
+    <input id="nom" placeholder="Nom">
+
+    <input id="prenom" placeholder="Prénom">
+
+    <input id="entreprise" placeholder="Entreprise">
+
+    <input id="email" placeholder="Email professionnel">
+
+
+    <button class="btn btn-primary" id="validate-stock">
+      Accéder au stock
+    </button>
+
+    <p id="stock-message"></p>
+
+  </div>
+
+</div>
+
+     
 <script src="script.js"></script>
 </body>
 </html>
