@@ -281,14 +281,51 @@ section { padding: 96px 0; }
   border-left: 1px solid var(--line-light);
 }
 .stat:first-child { border-left: none; padding-left: 0; }
-.stat-value {
-  font-family: var(--font-mono);
-  font-size: 1.3rem;
-  color: var(--volt);
-  letter-spacing: 0.04em;
+.stats-strip {
+  background: var(--ink-soft);
+  color: var(--paper);
+  padding: 42px 0;
 }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stat {
+  position: relative;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--line-light);
+}
+
+.stat:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.stat-number {
+  font-family: var(--font-mono);
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--volt);
+  letter-spacing: -0.04em;
+}
+
+.stat-unit {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--paper);
+  margin-top: 6px;
+}
+
 .stat-label {
-  font-size: 0.85rem;
+  margin-top: 12px;
+  font-size: 0.9rem;
   color: var(--paper-dim);
 }
 
