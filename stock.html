@@ -48,7 +48,15 @@ Stock actuel des produits
 
 <script src="stock.js"></script>
 
+<script>
 
+if(sessionStorage.getItem("stockAccess") !== "true"){
+
+window.location.href="index.html";
+
+}
+
+</script>
 </body>
 
 </html>
