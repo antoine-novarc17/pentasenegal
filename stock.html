@@ -1,45 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Penta Sénégal — Stock produits</title>
+
+<meta name="description" content="Accès au stock produits Penta Sénégal.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
 <body>
 
-<!-- COPIE EXACTE DU SVG LOGO DE INDEX -->
 
-<!-- HEADER COPIE EXACTE DE INDEX -->
+<!-- ================= LOGO SVG ================= -->
+<!-- COPIE EXACTE DU SVG DE TON INDEX ICI -->
+
+
+<!-- ================= HEADER ================= -->
+
 <header class="site-header" id="top">
-...
+
+<div class="container header-inner">
+
+
+<a href="index.html" class="logo" aria-label="Penta Sénégal">
+
+<svg class="logo-svg" viewBox="0 0 1199.71 256">
+<use href="#logo-penta-senegal"></use>
+</svg>
+
+</a>
+
+
+
+<nav class="main-nav" id="main-nav">
+
+<a href="index.html#histoire">
+Notre histoire
+</a>
+
+<a href="index.html#competences">
+Compétences
+</a>
+
+<a href="stock.html">
+Stock
+</a>
+
+<a href="index.html#galerie">
+Galerie
+</a>
+
+<a href="index.html#contact" class="nav-cta">
+Contact
+</a>
+
+
+</nav>
+
+
+
+<button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
+</div>
+
 </header>
+
+
+
 
 
 <main>
 
-<!-- UNIQUEMENT CETTE PARTIE CHANGE -->
 
 <section class="stock-page">
 
+
 <div class="container">
+
 
 <p class="eyebrow">
 Disponibilité
 </p>
 
+
 <h1>
 Stock produits
 </h1>
+
 
 <p class="section-lead">
 Cet espace est réservé aux partenaires Penta Sénégal.
 </p>
 
 
+
+
+<!-- STOCK CACHÉ AVANT VALIDATION -->
+
 <div id="stock-content" class="hidden">
 
 
 <div class="stock-table" id="stock-table">
 
+
 <div class="stock-row stock-head">
 
-<span>Produit</span>
-<span>Catégorie</span>
-<span>Quantité</span>
-<span>Statut</span>
+<span>
+Produit
+</span>
+
+<span>
+Catégorie
+</span>
+
+<span>
+Quantité
+</span>
+
+<span>
+Statut
+</span>
 
 </div>
 
@@ -51,6 +152,7 @@ Cet espace est réservé aux partenaires Penta Sénégal.
 
 
 </div>
+
 
 </section>
 
@@ -59,33 +161,53 @@ Cet espace est réservé aux partenaires Penta Sénégal.
 
 
 
-<!-- FOOTER COPIE EXACTE DE INDEX -->
+
+
+
+<!-- ================= FOOTER ================= -->
+
 
 <footer class="site-footer">
-  <div class="container footer-inner">
 
-    <span class="logo logo-footer">
+<div class="container footer-inner">
 
-      <svg class="logo-svg" viewBox="0 0 1199.71 256">
-        <use href="#logo-penta-senegal"></use>
-      </svg>
 
-    </span>
+<span class="logo logo-footer">
 
-    <p>
-      &copy; <span id="year"></span> Penta Sénégal. Tous droits réservés.
-    </p>
+<svg class="logo-svg" viewBox="0 0 1199.71 256">
 
-  </div>
+<use href="#logo-penta-senegal"></use>
+
+</svg>
+
+
+</span>
+
+
+<p>
+&copy; <span id="year"></span> Penta Sénégal. Tous droits réservés.
+</p>
+
+
+</div>
+
+
 </footer>
 
 
 
-<!-- POPUP ACCES STOCK -->
+
+
+
+
+<!-- ================= POPUP STOCK ================= -->
+
 
 <div class="stock-modal" id="stock-modal">
 
+
 <div class="stock-box">
+
 
 <button class="close-stock" id="close-stock">
 ×
@@ -103,6 +225,7 @@ Merci de renseigner vos informations.
 </p>
 
 
+
 <input id="nom" placeholder="Nom">
 
 <input id="prenom" placeholder="Prénom">
@@ -112,9 +235,13 @@ Merci de renseigner vos informations.
 <input id="email" placeholder="Email professionnel">
 
 
+
 <button class="btn btn-primary" id="validate-stock">
+
 Accéder au stock
+
 </button>
+
 
 
 <p id="stock-message"></p>
@@ -122,13 +249,18 @@ Accéder au stock
 
 </div>
 
+
 </div>
 
-<script>
-alert("La page stock charge bien le script");
-</script>
+
+
+
+
+
 
 <script src="stock.js"></script>
 
 
 </body>
+
+</html>
