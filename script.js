@@ -79,7 +79,7 @@ const contactForm = document.getElementById('contact-form');
 const formNote = document.getElementById('form-note');
 
 
-const CONTACT_SCRIPT_URL = "TON_URL_GOOGLE_SCRIPT_ICI";
+const CONTACT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzv3kaDjqTYi2dVztMKK5AjgkhhFJNFwNFa_7rJG3-fRx_FTjGn_W9t1v_6IUc2CMJL/exec";
 
 
 if(contactForm){
