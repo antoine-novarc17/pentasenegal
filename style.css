@@ -826,7 +826,10 @@ margin-top:15px;
 
 }
 
-
+#validate-stock:hover {
+  color: black;
+  
+}
 
 
 /* TABLE STOCK */
