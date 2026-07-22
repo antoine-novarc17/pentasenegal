@@ -71,16 +71,74 @@ carousel.addEventListener('mouseleave', () => {
 
 /* =========================================================
    FORMULAIRE DE CONTACT
-   Actuellement affiche juste un message de confirmation.
-   Pour envoyer réellement les messages, reliez ce formulaire
-   à votre service d'e-mail (ex: Formspree, EmailJS) ou à
-   votre back-end, en remplaçant le contenu de cette fonction.
+   Envoi via Google Apps Script
    ========================================================= */
+
+
 const contactForm = document.getElementById('contact-form');
 const formNote = document.getElementById('form-note');
 
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  formNote.textContent = 'Merci, votre message a bien été enregistré. Notre équipe vous recontacte rapidement.';
-  contactForm.reset();
+
+const CONTACT_SCRIPT_URL = "TON_URL_GOOGLE_SCRIPT_ICI";
+
+
+if(contactForm){
+
+contactForm.addEventListener('submit', (event)=>{
+
+event.preventDefault();
+
+
+const nom = document.getElementById("nom-contact").value.trim();
+const email = document.getElementById("email-contact").value.trim();
+const message = document.getElementById("message-contact").value.trim();
+
+
+formNote.textContent = "Envoi en cours...";
+
+
+fetch(CONTACT_SCRIPT_URL, {
+
+method:"POST",
+
+body: JSON.stringify({
+
+nom: nom,
+email: email,
+message: message
+
+})
+
+})
+
+
+.then(()=>{
+
+
+formNote.textContent =
+"Votre message a bien été envoyé. Nous vous répondrons rapidement.";
+
+
+contactForm.reset();
+
+
+})
+
+
+.catch(error=>{
+
+
+console.error(error);
+
+
+formNote.textContent =
+"Une erreur est survenue. Merci de réessayer.";
+
+
 });
+
+
+});
+
+
+}
