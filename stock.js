@@ -7,7 +7,7 @@ const stock = document.getElementById("stock-content");
 const message = document.getElementById("stock-message");
 
 // URL Google Apps Script
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzPkNUhj-Z4K1eEp_pBlYiPxKiYub3_wU8ORDwJgxhnERmWAgTgCbQgPLEIOVpMO2iV/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwOpGMVbAv5K3pWIMX-8SAxrM1heJA0EIRJBQSF_g30ArLzrS-7gvOBSt_udkhfvtQK/exec";
 
 // Affiche la popup dès l'arrivée sur la page
 if (modal) {
