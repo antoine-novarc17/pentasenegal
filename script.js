@@ -74,6 +74,7 @@ renderStock();
    ========================================================= */
 const track = document.getElementById('carousel-track');
 const slides = Array.from(track.children);
+console.log("Nombre de slides :", slides.length);
 const prevBtn = document.getElementById('carousel-prev');
 const nextBtn = document.getElementById('carousel-next');
 const dotsWrap = document.getElementById('carousel-dots');
