@@ -827,7 +827,7 @@ margin-top:15px;
 }
 
 #validate-stock:hover {
-  color: black;
+  color: var(--couleur-principale);
   
 }
 
