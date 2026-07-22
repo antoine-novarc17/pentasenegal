@@ -25,46 +25,7 @@ mainNav.querySelectorAll('a').forEach(link => {
   });
 });
 
-/* =========================================================
-   STOCK DES PRODUITS
-   Pour mettre à jour le stock : modifiez uniquement le
-   tableau "produits" ci-dessous. Chaque ligne =
-   { nom, categorie, quantite, statut }
-   statut possible : "en-stock", "faible", "rupture"
-   ========================================================= */
-const produits = [
-  { nom: 'Poteaux béton 9m',        categorie: 'Ligne aérienne',   quantite: 42, statut: 'en-stock' },
-  { nom: 'Câble aluminium ACSR',    categorie: 'Ligne aérienne',   quantite: 3800, statut: 'en-stock' },
-  { nom: 'Piquets de terre cuivre', categorie: 'Mise à la terre',  quantite: 15,  statut: 'faible'   },
-  { nom: 'Parafoudres BT',          categorie: 'Protection foudre',quantite: 0,   statut: 'rupture'  },
-  { nom: 'Électrodes de soudure',   categorie: 'Soudure',          quantite: 260, statut: 'en-stock' },
-  { nom: 'Pylônes télécoms',        categorie: 'Télécoms',         quantite: 6,   statut: 'faible'   },
-];
 
-const statutLabels = {
-  'en-stock': 'En stock',
-  'faible': 'Stock faible',
-  'rupture': 'Rupture',
-};
-
-function renderStock() {
-  const table = document.getElementById('stock-table');
-
-  produits.forEach(produit => {
-    const row = document.createElement('div');
-    row.className = 'stock-row';
-    row.setAttribute('role', 'row');
-
-    row.innerHTML = `
-      <span role="cell">${produit.nom}</span>
-      <span role="cell">${produit.categorie}</span>
-      <span role="cell" class="qty">${produit.quantite}</span>
-      <span role="cell"><span class="status ${produit.statut}">${statutLabels[produit.statut]}</span></span>
-    `;
-    table.appendChild(row);
-  });
-}
-renderStock();
 
 /* =========================================================
    CARROUSEL DE PHOTOS
