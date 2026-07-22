@@ -42,7 +42,12 @@ validate.addEventListener("click", function () {
     }
 
     message.textContent = "Enregistrement en cours...";
-
+console.log({
+    nom: nom,
+    prenom: prenom,
+    entreprise: entreprise,
+    email: email
+});
     fetch(GOOGLE_SCRIPT_URL, {
 
         method: "POST",
