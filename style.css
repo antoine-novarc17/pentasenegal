@@ -227,6 +227,26 @@ section { padding: 96px 0; }
   background: var(--paper);
 }
 
+.nav-stock{
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 4px;
+  background: rgba(255,255,255,.04);
+  color: var(--paper);
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: .2s ease;
+}
+
+.nav-stock:hover{
+  background: rgba(234,89,14,.12);
+  border-color: var(--volt);
+  color: var(--volt);
+}
+
 /* ---------- Hero ---------- */
 .hero {
   background: var(--ink);
