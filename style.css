@@ -395,21 +395,12 @@ section { padding: 96px 0; }
 .competences-grid {
   margin-top: 48px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
 .competences-grid .plate {
-  grid-column: span 2;
-}
-
-/* Centre les deux dernières cartes */
-.competences-grid .plate:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.competences-grid .plate:nth-child(5) {
-  grid-column: 4 / span 2;
+  grid-column: auto;
 }
 
 /* Carte "plaque" : coins pointés comme des rivets, obtenus en pur CSS
@@ -683,7 +674,17 @@ section { padding: 96px 0; }
   .stock-row { grid-template-columns: 1.6fr 1fr 0.6fr 1fr; font-size: 0.85rem; padding: 12px; }
 }
 
+@media (max-width: 900px) {
+  .competences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 600px) {
+  .competences-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 /* ==========================
