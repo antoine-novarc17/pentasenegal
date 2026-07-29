@@ -5,8 +5,7 @@
    toucher au reste du fichier.
    ========================================================= */
 
-/* ---------- Année automatique dans le pied de page ---------- */
-document.getElementById('year').textContent = new Date().getFullYear();
+
 
 /* ---------- Menu mobile ---------- */
 const navToggle = document.getElementById('nav-toggle');
