@@ -78,7 +78,7 @@ const contactForm = document.getElementById('contact-form');
 const formNote = document.getElementById('form-note');
 
 
-const CONTACT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzisPjhq8UW0PX7lIeg1opVPkDbEgEdTjjY6xoruUmbw5PyBhgI0TETQHeRejFBg1IbRQ/exec";
+const CONTACT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxKwZzq8PC5tQ7Q3NDNXVcHBdMQe_9SzIDa7upGSIyt4YYao-29tdVsQmeqhlzxVphI/exec";
 
 
 if(contactForm){
