@@ -92,12 +92,27 @@ console.log({
    ========================================================= */
 
 const produits = [
-  { nom: 'Poteaux béton 9m',        categorie: 'Ligne aérienne',    quantite: 42,   statut: 'en-stock' },
-  { nom: 'Câble aluminium ACSR',    categorie: 'Ligne aérienne',    quantite: 3800, statut: 'en-stock' },
-  { nom: 'Piquets de terre cuivre', categorie: 'Mise à la terre',   quantite: 15,   statut: 'faible' },
-  { nom: 'Parafoudres BT',          categorie: 'Protection foudre', quantite: 0,    statut: 'rupture' },
-  { nom: 'Électrodes de soudure',   categorie: 'Soudure',           quantite: 260,  statut: 'en-stock' },
-  { nom: 'Pylônes télécoms',        categorie: 'Télécoms',          quantite: 6,    statut: 'faible' }
+{ nom: 'Ensemble Montant + Traverse NV57070E EN S355',        categorie: 'Armements',                       quantite: 80,   statut: 'en-stock' },
+{ nom: 'Herse d\'ancrage simple 1700x70 avec ridoir S355',    categorie: 'Armements',                       quantite: 80,   statut: 'en-stock' },
+{ nom: 'Traverse double ancrage L70 E1700 S355',              categorie: 'Armements',                       quantite: 80,   statut: 'en-stock' },
+{ nom: 'Œillet à rotule norme de 16',                         categorie: 'Accessoires de chaines',           quantite: 1000, statut: 'en-stock' },
+{ nom: 'Pince de suspension 22 à 185mm²',                     categorie: 'Accessoires de chaines',           quantite: 500,  statut: 'en-stock' },
+{ nom: 'Pince de suspension 22 à 93mm²',                      categorie: 'Accessoires de chaines',           quantite: 500,  statut: 'en-stock' },
+{ nom: 'Bras de tête BTSE',                                  categorie: 'Réseau HTA',                       quantite: -,    statut: 'en-stock' },
+{ nom: 'Bras horizontal BPSE 70 680 S355',                    categorie: 'Réseau HTA',                       quantite: -,    statut: 'en-stock' },
+{ nom: 'Isolateur composite rigide 36 kV LDF:1280mm',         categorie: 'Isolateurs',                      quantite: -,    statut: 'en-stock' },
+{ nom: 'Ensemble de suspension BT',                          categorie: 'Réseau BT',                       quantite: 1000, statut: 'en-stock' },
+{ nom: 'Ensemble d\'ancrage simple BT',                      categorie: 'Réseau BT',                       quantite: 1000, statut: 'en-stock' },
+{ nom: 'Connecteurs à perforation simultanée 16 à 95',       categorie: 'Connecteurs à perforation',       quantite: 3000, statut: 'en-stock' },
+{ nom: 'Capuchon thermo-rétractable 16-70',                   categorie: 'Produits thermo-rétractables',    quantite: 649,  statut: 'en-stock' },
+{ nom: 'Etrier 16x70x140 avec 6 écrous',                      categorie: 'Accessoires de chaines',           quantite: 1000, statut: 'en-stock' },
+{ nom: 'Isolateur composite 70 kN 1116mm',                    categorie: 'Isolateurs',                      quantite: -,    statut: 'en-stock' },
+{ nom: 'Ball socket norme de 16',                             categorie: 'Accessoires de chaines',           quantite: 1500, statut: 'en-stock' },
+{ nom: 'Ball socket BS 70',                                  categorie: 'Accessoires de chaines',           quantite: 500,  statut: 'en-stock' },
+{ nom: 'Pince d\'ancrage 34 à 148mm²',                        categorie: 'Accessoires de chaines',           quantite: 500,  statut: 'en-stock' },
+{ nom: 'Attache préformée 54,6 sur ISI-LPI',                  categorie: 'Accessoires de chaines',           quantite: -,    statut: 'en-stock' },
+{ nom: 'Feuillard Inox 20x0,4',                              categorie: 'Interrupteur aérien à commande manuelle', quantite: 40, statut: 'en-stock' },
+{ nom: 'Chape Inox 20 (vendues par 100 unités)',              categorie: 'Accessoires de chaines',           quantite: 4000, statut: 'en-stock' },
 ];
 
 const statutLabels = {
