@@ -482,6 +482,7 @@ section { padding: 96px 0; }
   background: var(--dot-color, var(--steel));
 }
 .status.en-stock { --dot-color: var(--volt); }
+.status.a-venir { --dot-color: var(--steel); }
 .status.faible { --dot-color: var(--steel); }
 .status.rupture { --dot-color: var(--steel); opacity: 0.6; }
 
