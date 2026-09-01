@@ -120,6 +120,32 @@ const statutLabels = {
     "rupture": "Rupture"
 };
 
+/* 🔧 STATUT "EN STOCK À PARTIR DU JJ/MM"
+   Dans le tableau "produits" ci-dessus, au lieu de "en-stock", écrivez
+   "en-stock-JJ-MM" (jour puis mois, sur 2 chiffres) pour indiquer une
+   date de disponibilité future.
+   Exemple : statut: "en-stock-01-02"  →  affiche "EN STOCK À PARTIR DU 01/02" */
+const REGEX_DATE_STATUT = /^en-stock-(\d{2})-(\d{2})$/;
+
+function getStatutAffichage(statut) {
+
+    const match = REGEX_DATE_STATUT.exec(statut);
+
+    if (match) {
+        const [, jour, mois] = match;
+        return {
+            classe: "a-venir",
+            libelle: `En stock à partir du ${jour}/${mois}`
+        };
+    }
+
+    return {
+        classe: statut,
+        libelle: statutLabels[statut] || statut
+    };
+
+}
+
 function renderStock() {
 
     const table = document.getElementById("stock-table");
@@ -135,13 +161,15 @@ function renderStock() {
         row.className = "stock-row";
         row.setAttribute("role", "row");
 
+        const { classe, libelle } = getStatutAffichage(produit.statut);
+
         row.innerHTML = `
             <span role="cell">${produit.nom}</span>
             <span role="cell">${produit.categorie}</span>
             <span role="cell" class="qty">${produit.quantite}</span>
             <span role="cell">
-                <span class="status ${produit.statut}">
-                    ${statutLabels[produit.statut]}
+                <span class="status ${classe}">
+                    ${libelle}
                 </span>
             </span>
         `;
