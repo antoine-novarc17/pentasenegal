@@ -25,15 +25,11 @@ if (close) {
 validate.addEventListener("click", function () {
 
     const nom = document.getElementById("nom").value.trim();
-    const prenom = document.getElementById("prenom").value.trim();
     const entreprise = document.getElementById("entreprise").value.trim();
-    const email = document.getElementById("email").value.trim();
 
     if (
         nom === "" ||
-        prenom === "" ||
-        entreprise === "" ||
-        email === ""
+        entreprise === ""
     ) {
 
         message.textContent = "Merci de remplir tous les champs.";
@@ -44,9 +40,7 @@ validate.addEventListener("click", function () {
     message.textContent = "Enregistrement en cours...";
 console.log({
     nom: nom,
-    prenom: prenom,
-    entreprise: entreprise,
-    email: email
+    entreprise: entreprise
 });
     fetch(GOOGLE_SCRIPT_URL, {
 
@@ -54,9 +48,7 @@ console.log({
 
         body: JSON.stringify({
             nom: nom,
-            prenom: prenom,
-            entreprise: entreprise,
-            email: email
+            entreprise: entreprise
         })
 
     })
